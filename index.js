@@ -89,8 +89,20 @@ function playGame()
     playRound(getHumanChoice(), getComputerChoice());
     playRound(getHumanChoice(), getComputerChoice());
     playRound(getHumanChoice(), getComputerChoice());
-    return console.log(`Final scores:
-    YOU: ${humanScore}
-    COMPUTER: ${computerScore}`);
+    if(humanScore > computerScore)
+    {
+        return console.log(`Final scores:
+            YOU: ${humanScore}
+            COMPUTER: ${computerScore}
+            YOU WIN!`);
+    }
+    else
+    {
+        return console.log(`Final scores:
+            YOU: ${humanScore}
+            COMPUTER: ${computerScore}
+            YOU LOSE!`);
+    }
+    
 }
 playGame();
